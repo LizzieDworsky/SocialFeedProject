@@ -4,9 +4,11 @@ import Post from "./Post";
 const PostMapper = ({ array }) => {
     return (
         <ul>
-            {array.map((item) => {
-                <li>1</li>;
-            })}
+            {array.map((item) => (
+                <li key={item.id}>
+                    <Post post={item} />
+                </li>
+            ))}
         </ul>
     );
 };
