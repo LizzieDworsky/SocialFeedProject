@@ -29,10 +29,15 @@ function App() {
         },
     ]);
 
+    function createPost(entry) {
+        let tempEntries = [entry, ...posts];
+        setPosts(tempEntries);
+    }
+
     return (
         <div>
             <NavBar />
-            <CreatePost />
+            <CreatePost createNewPost={createPost} />
             <PostMapper array={posts} />
         </div>
     );
