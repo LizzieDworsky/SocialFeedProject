@@ -7,7 +7,7 @@ function App() {
     //Stateful variables
     const [posts, setPosts] = useState([
         {
-            id: 3,
+            id: 1,
             name: "Jake",
             message: "I like pizza!",
             isLiked: false,
@@ -21,7 +21,7 @@ function App() {
             isDisliked: false,
         },
         {
-            id: 1,
+            id: 3,
             name: "Amy",
             message: "I like flautas!",
             isLiked: false,
@@ -30,7 +30,7 @@ function App() {
     ]);
 
     function createPost(entry) {
-        let tempEntries = [entry, ...posts];
+        let tempEntries = [...posts, entry];
         setPosts(tempEntries);
     }
 

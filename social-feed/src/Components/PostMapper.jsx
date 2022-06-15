@@ -1,10 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import Post from "./Post";
 
 const PostMapper = ({ array }) => {
+    // const [revArray, setRevArray] = useState(array.reverse());
+    let revArray = [...array];
+    revArray.reverse();
     return (
         <ul>
-            {array.map((item) => (
+            {revArray.map((item) => (
                 <li key={item.id}>
                     <Post post={item} />
                 </li>
@@ -12,5 +16,4 @@ const PostMapper = ({ array }) => {
         </ul>
     );
 };
-
 export default PostMapper;
