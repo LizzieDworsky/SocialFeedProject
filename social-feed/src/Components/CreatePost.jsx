@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const CreatePost = ({ createNewPost }) => {
+const CreatePost = ({ createNewPost, array }) => {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
 
     function handleCreate(event) {
         event.preventDefault();
         let newEntry = {
-            id: Math.floor(Math.random() * 15 + 4),
+            id: array.length + 1,
             name: name,
             message: message,
             isLiked: false,
@@ -17,7 +17,7 @@ const CreatePost = ({ createNewPost }) => {
     }
 
     return (
-        <form onSubmit={handleCreate}>
+        <form onSubmit={(event) => handleCreate(event)}>
             <label>Name</label>
             <input
                 type="text"
