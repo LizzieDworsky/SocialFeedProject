@@ -1,9 +1,11 @@
 import React from "react";
 
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <header>
-            <h1>Social Feed</h1>
+            <h1>
+                Social <span className="feed">Feed</span>
+            </h1>
         </header>
     );
 };

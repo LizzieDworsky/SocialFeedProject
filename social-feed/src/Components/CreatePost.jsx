@@ -17,20 +17,25 @@ const CreatePost = ({ createNewPost, array }) => {
     }
 
     return (
-        <form onSubmit={(event) => handleCreate(event)}>
-            <label>Name</label>
+        <form className="create-post" onSubmit={(event) => handleCreate(event)}>
+            <label className="label-name-message">Name</label>
             <input
+                className="input-name"
                 type="text"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
             />
-            <label>Post</label>
+            <br />
+            <label className="label-name-message">Post</label>
             <input
+                className="input-message"
                 type="text"
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
             />
-            <button type="submit">Create</button>
+            <button className="create-button" type="submit">
+                Create
+            </button>
         </form>
     );
 };

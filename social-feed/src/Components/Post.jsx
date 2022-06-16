@@ -1,18 +1,43 @@
 import React from "react";
+import { useState } from "react";
 
 const Post = ({ post }) => {
-    function isLikedPressed(event) {
-        // event. somthing needs to happen here, need to have the onclick event cause the boolean value change
-        // isLiked = !isLiked
+    const [isLiked, setIsLiked] = useState("inactive");
+    const [isDisliked, setIsDisliked] = useState("inactive");
+
+    function isLikedClicked(event) {
+        if (isLiked === "inactive") {
+            setIsLiked("isLiked");
+            setIsDisliked("inactive");
+        } else {
+            setIsLiked("inactive");
+        }
+    }
+    function isDislikedClicked(event) {
+        if (isDisliked === "inactive") {
+            setIsDisliked("isDisliked");
+            setIsLiked("inactive");
+        } else {
+            setIsDisliked("inactive");
+        }
     }
 
     return (
-        <div>
-            <h3>{post.name}</h3>
-            <p>{post.message}</p>
-            <button>{post.isLiked}</button>
-            {/* onclick= anon function call */}
-            <button>{post.isDisliked}</button>
+        <div className="post">
+            <h3 className="name">{post.name}</h3>
+            <p className="message">{post.message}</p>
+            <button
+                className={isLiked}
+                onClick={(event) => isLikedClicked(event)}
+            >
+                Like
+            </button>
+            <button
+                className={isDisliked}
+                onClick={(event) => isDislikedClicked(event)}
+            >
+                Dislike
+            </button>
         </div>
     );
 };

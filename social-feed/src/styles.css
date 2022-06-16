@@ -1,0 +1,134 @@
+body {
+    background: #90a892;
+}
+
+header {
+    background-color: #f8f0e3;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 1em;
+    box-shadow: 5px 5px 10px #443c38;
+    border-radius: 5px;
+}
+
+h1 {
+    margin-top: 15px;
+    color: #443c38;
+    text-shadow: 1px 1px #443c38;
+}
+
+button {
+    float: right;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: 1px solid #443c38;
+    background-color: #443c38;
+    color: #f8f0e3;
+    box-shadow: 2px 2px 5px #443c38;
+    transition: all 200ms ease-in-out;
+}
+button:hover {
+    background-color: #f8f0e3;
+    color: #443c38;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    margin-block-start: 0;
+    padding: 0;
+}
+
+.post {
+    margin: auto;
+    width: 60%;
+    height: max-content;
+}
+
+.feed {
+    color: #90a892;
+}
+
+.form {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 60%;
+    padding: 10px;
+    box-shadow: 2px 2px 10px #443c38;
+}
+
+.mapper {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: auto;
+    width: 60%;
+    padding: 0px;
+    box-shadow: 2px 2px 10px #443c38;
+}
+
+.seperate-posts {
+    border-top: 1px;
+    border-color: black;
+    width: 95%;
+}
+
+.inactive {
+    background-color: #443c38;
+    font-size: 10px;
+}
+
+.isLiked {
+    background-color: #46ce42;
+    font-size: 10px;
+    color: #443c38;
+}
+
+.isDisliked {
+    background-color: #bc554b;
+    font-size: 10px;
+}
+
+.message {
+    margin: auto;
+    width: 100%;
+    overflow-wrap: anywhere;
+    padding: 2%;
+}
+
+.name {
+    margin: auto;
+    width: 90%;
+    padding: 2%;
+}
+
+.create-post {
+    padding: 1em;
+}
+
+.label-name-message {
+    margin-right: 10px;
+    color: #443c38;
+    font-weight: bold;
+    text-shadow: 1px 1px #f8f0e3;
+}
+
+.input-name {
+    background-color: #f8f0e3;
+    border: 2px solid #443c38;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px #443c38;
+}
+
+.input-message {
+    background-color: #f8f0e3;
+    border: 2px solid #443c38;
+    padding: 20px;
+    margin-left: 10px;
+    box-shadow: 2px 2px 5px #443c38;
+}

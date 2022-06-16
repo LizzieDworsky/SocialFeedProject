@@ -35,10 +35,14 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="body">
             <NavBar />
-            <CreatePost createNewPost={createPost} array={posts} />
-            <PostMapper array={posts} />
+            <div className="form">
+                <CreatePost createNewPost={createPost} array={posts} />
+            </div>
+            <div className="mapper">
+                <PostMapper array={posts} />
+            </div>
         </div>
     );
 }
