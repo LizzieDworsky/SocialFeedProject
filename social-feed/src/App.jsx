@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CreatePost from "./Components/CreatePost";
 import NavBar from "./Components/NavBar";
+import Test from "./Components/Test";
 import PostMapper from "./Components/PostMapper";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
             id: 1,
             name: "Jake",
             message: "I like pizza!",
+            date: "June 5th",
             isLiked: false,
             isDisliked: false,
         },
@@ -17,6 +19,7 @@ function App() {
             id: 2,
             name: "Pascal",
             message: "I like cereal!",
+            date: "June 8th",
             isLiked: false,
             isDisliked: false,
         },
@@ -24,6 +27,7 @@ function App() {
             id: 3,
             name: "Amy",
             message: "I like flautas!",
+            date: "June 9th",
             isLiked: false,
             isDisliked: false,
         },
@@ -43,6 +47,7 @@ function App() {
             <div className="mapper">
                 <PostMapper array={posts} />
             </div>
+            <Test />
         </div>
     );
 }

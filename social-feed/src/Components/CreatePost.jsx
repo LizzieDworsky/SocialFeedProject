@@ -4,12 +4,24 @@ const CreatePost = ({ createNewPost, array }) => {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
 
+    function getCurrentDate() {
+        let newDate = new Date();
+        let date = newDate.getDate();
+        let month = newDate.getMonth() + 1;
+        if (month === 6) {
+            month = "June";
+        }
+        let currentDate = `${month} ${date}th`;
+        return currentDate;
+    }
+
     function handleCreate(event) {
         event.preventDefault();
         let newEntry = {
             id: array.length + 1,
             name: name,
             message: message,
+            date: getCurrentDate(),
             isLiked: false,
             isDisliked: false,
         };

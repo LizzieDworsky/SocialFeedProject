@@ -25,6 +25,7 @@ const Post = ({ post }) => {
     return (
         <div className="post">
             <h3 className="name">{post.name}</h3>
+            <h4 className="date">{post.date}</h4>
             <p className="message">{post.message}</p>
             <button
                 className={isLiked}
