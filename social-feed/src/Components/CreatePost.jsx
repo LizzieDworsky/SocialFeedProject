@@ -5,12 +5,24 @@ const CreatePost = ({ createNewPost, array }) => {
     const [message, setMessage] = useState("");
 
     function getCurrentDate() {
+        let monthArray = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ];
         let newDate = new Date();
         let date = newDate.getDate();
-        let month = newDate.getMonth() + 1;
-        if (month === 6) {
-            month = "June";
-        }
+        let monthIndex = newDate.getMonth();
+        let month = monthArray.at(monthIndex);
         let currentDate = `${month} ${date}th`;
         return currentDate;
     }
