@@ -47,7 +47,7 @@ function App() {
             <div className="mapper">
                 <PostMapper array={posts} />
             </div>
-            <Test />
+            {/* <Test /> */}
         </div>
     );
 }

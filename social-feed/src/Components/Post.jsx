@@ -2,10 +2,11 @@ import React from "react";
 import { useState } from "react";
 
 const Post = ({ post }) => {
+    // const [bool, setBool] = useState(false);
     const [isLiked, setIsLiked] = useState("inactive");
     const [isDisliked, setIsDisliked] = useState("inactive");
 
-    function isLikedClicked(event) {
+    function isLikedClicked() {
         if (isLiked === "inactive") {
             setIsLiked("isLiked");
             setIsDisliked("inactive");
@@ -13,7 +14,7 @@ const Post = ({ post }) => {
             setIsLiked("inactive");
         }
     }
-    function isDislikedClicked(event) {
+    function isDislikedClicked() {
         if (isDisliked === "inactive") {
             setIsDisliked("isDisliked");
             setIsLiked("inactive");
@@ -39,6 +40,10 @@ const Post = ({ post }) => {
             >
                 Dislike
             </button>
+            {/* <button className={isLiked} onClick={() => setBool(!bool)}>
+                {bool ? "IsLiked" : "inactive"}
+                Test
+            </button> */}
         </div>
     );
 };
